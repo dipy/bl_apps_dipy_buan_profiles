@@ -46,11 +46,11 @@ To see the documentation of all arguments, [go to the following page](https://di
 
 ## Input
 
-To see the documentation of all the arguments, follow this [link](https://dipy.org/documentation/1.1.1./reference_cmd/dipy_buan_profiles/).
+To see the documentation of all the arguments, follow this [link](https://dipy.org/documentation/1.2.0./reference_cmd/dipy_buan_profiles/).
 
 ## Output
 
-All output files will be generated according to the passed arguments, as explained [here](https://dipy.org/documentation/1.1.1./reference_cmd/dipy_buan_profiles/).
+All output files will be generated according to the passed arguments, as explained [here](https://dipy.org/documentation/1.2.0./reference_cmd/dipy_buan_profiles/).
 ```
 ### Dependencies
 
