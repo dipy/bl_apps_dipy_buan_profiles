@@ -1,8 +1,6 @@
 {
-    "command": "dipy_mask:dwi",
-    "lb": 5,
-    "dwi": "testdata/brad1/data.nii.gz",
-    "lb": 0.2,
-    "ub": "Inf",
-    "img": "testdata/brad1/data.nii.gz"
+    "command": "dipy_buan_profiles",
+    "no_disks": 100,
+    "model_bundle_folder": "test_data/model_bundles"
+    "subject_folder": "test_data/subjects"
 }
