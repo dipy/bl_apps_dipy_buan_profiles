@@ -1,0 +1,38 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=6
+#PBS -l vmem=16gb
+#PBS -l walltime=10:00:00
+
+set -e
+set -x
+
+cmd=`jq -r .command config.json`
+case "$cmd" in
+
+    dipy_mask:dwi)
+        cat > script.sh <<EOF
+#!/bin/bash
+dipy_mask --force \
+    --out_dir $PWD \
+    --out_mask mask.nii.gz \
+    $(jq -r .dwi config.json) $(jq -r .lb config.json)
+EOF
+      ;;
+    dipy_mask:tensor)
+        cat > script.sh <<EOF
+#!/bin/bash
+dipy_mask --force \
+    --out_dir $PWD \
+    --out_mask mask.nii.gz \
+    $(jq -r .fa config.json) $(jq -r .lb config.json)
+EOF
+        ;;
+    *)
+        echo "invalid command: $cmd"
+        exit 1
+esac
+
+chmod +x script.sh
+SINGULARITYENV_PYTHONNOUSERSITE=true singularity exec -e docker://brainlife/dipy:1.1.1 ./script.sh
+
+echo "done"
