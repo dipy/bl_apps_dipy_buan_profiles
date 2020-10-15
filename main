@@ -10,12 +10,11 @@ set -x
 
 mkdir -p output
 chmod -R +w output
-
-time singularity exec -e docker://brainlife/dipy:1.1.1 dipy_mask \
+time singularity exec -e docker://brainlife/dipy:1.1.1 dipy_buan_profiles \
     --force \
     --out_dir output \
-    --out_mask mask.nii.gz \
-    --ub $(jq -r .ub config.json) \
-    $(jq -r .img config.json) $(jq -r .lb config.json)
+    --clust_thr $(jq -r .clust_thr config.json) \
+    --threshold $(jq -r .threshold config.json) \
+    $(jq -r .subject_folder config.json)
 
 echo "done"
