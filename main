@@ -13,8 +13,7 @@ chmod -R +w output
 time singularity exec -e docker://brainlife/dipy:1.1.1 dipy_buan_profiles \
     --force \
     --out_dir output \
-    --clust_thr $(jq -r .clust_thr config.json) \
-    --threshold $(jq -r .threshold config.json) \
-    $(jq -r .subject_folder config.json)
+    --no_disks $(jq -r .no_disks config.json) \
+    $(jq -r .model_bundle_folder config.json) $(jq -r .subject_folder config.json)
 
 echo "done"
