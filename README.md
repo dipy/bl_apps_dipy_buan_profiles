@@ -3,7 +3,7 @@
 This is a Brainlife wrapper App for `dipy_buan_profiles` workflow. This single wrapper is exposed through an apps registered on [Brainlife.io](https://brainlife.io).
 
 - More information about DIPY : [https://dipy.org/](https://dipy.org/)
-- More information about the command line `dipy_buan_shapes`: [Command line Reference](https://dipy.org/documentation/1.2.0./interfaces/buan_flow/)
+- More information about the command line `dipy_buan_profiles`: [Command line Reference](https://dipy.org/documentation/1.2.0./interfaces/buan_flow/)
 
 ## App Description
 
