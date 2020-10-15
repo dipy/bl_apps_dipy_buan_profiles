@@ -1,13 +1,17 @@
-# DIPY Workflow Wrapper
+# Dipy Workflow Wrapper
 
-This is a Brainlife wrapper App for the [`dipy_mask`](https://dipy.org/documentation/1.1.1./reference_cmd/dipy_mask/) workflow. This single wrapper is exposed through an App registered on [brainlife.io](https://brainlife.io).
+This is a Brainlife wrapper App for `dipy_buan_profiles` workflow. This single wrapper is exposed through an apps registered on [Brainlife.io](https://brainlife.io).
 
-- More information about DIPY : [dipy.org](https://dipy.org/)
-- More information about the command line: [`dipy_mask`](https://dipy.org/documentation/1.1.1./reference_cmd/dipy_mask/)
+- More information about DIPY : [https://dipy.org/](https://dipy.org/)
+- More information about the command line `dipy_buan_shapes`: [Command line Reference](https://dipy.org/documentation/1.2.0./interfaces/buan_flow/)
 
-### Authors
-- [Javier Guaje](https://github.com/guaje)
-- [Serge Koudoro](https://github.com/skoudoro)
+## App Description
+
+ The `dipy_buan_profiles` creates bundle profiles of the pathways and save sthe information in HD5 files. This app implements bundle profiles method presented in Bundle analytics, a computational framework for investigating the shapes and profiles of brain pathways across populations paper [1].
+
+## Authors
+
+[Bramsh Chandio](https://github.com/BramshQamar)
 
 ### Funding Acknowledgement
 DIPY is publicly funded and for the sustainability of the project it is helpful to Acknowledge the use of the software. We kindly ask that you acknowledge the funding below in your publications and code reusing this code.
@@ -21,30 +25,32 @@ DIPY is publicly funded and for the sustainability of the project it is helpful 
 [![NSF-IIS-1912270](https://img.shields.io/badge/NSF_IIS-1912270-blue.svg)](https://nsf.gov/awardsearch/showAward?AWD_ID=1912270)
 [![NSF-IIS-1636893](https://img.shields.io/badge/NSF_IIS-1636893-blue.svg)](https://nsf.gov/awardsearch/showAward?AWD_ID=1636893)
 
-### Citations
-We kindly ask that you cite the articles in the following [link](https://dipy.org/documentation/1.1.1./reference_cmd/dipy_mask/) when publishing papers and code using this code.
+## Citations
+
+[1] Chandio, BQ., et al. Bundle analytics, a computational framework for investigating the shapes and profiles of brain pathways across populations. Scientific reports,  10, 17149 (2020).
 
 ## Running the App
 
-### On Brainlife.io
+#### 1. On Brainlife.io
 
-You can see a list of [DIPY Apps currently registered on Brainlife](https://brainlife.io/apps#dipy). Find the App that you'd like to run and click "Execute".
+You can see a list of [Dipy Apps currently regsitered on Brainlife](https://brainlife.io/apps#dipy). Find the App that you'd like to run and click "Execute" tab to specify dataset that you'd like to run the App on.
 
-### Running Locally (on  your machine)
+#### 2. On  your machine (Running Locally)
 
 To run this command, you can simply type:
 
-```bash
-singularity exec -e docker://brainlife/dipy:1.1.1 dipy_mask [your_args]
+`singularity exec -e docker://brainlife/dipy:1.1.1 dipy_buan_profiles [your_args]`
+
+To see the documentation of all arguments, [go to the following page](https://dipy.org/documentation/1.2.0./interfaces/buan_flow/)
 ```
 
 ## Input
 
-To see the documentation of all the arguments, follow this [link](https://dipy.org/documentation/1.1.1./reference_cmd/dipy_mask/).
+To see the documentation of all the arguments, follow this [link](https://dipy.org/documentation/1.1.1./reference_cmd/dipy_buan_profiles/).
 
 ## Output
 
-All output files will be generated according to the passed arguments, as explained [here](https://dipy.org/documentation/1.1.1./reference_cmd/dipy_mask/).
+All output files will be generated according to the passed arguments, as explained [here](https://dipy.org/documentation/1.1.1./reference_cmd/dipy_buan_profiles/).
 
 ### Dependencies
 
