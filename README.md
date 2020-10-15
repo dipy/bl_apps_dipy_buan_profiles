@@ -51,7 +51,7 @@ To see the documentation of all the arguments, follow this [link](https://dipy.o
 ## Output
 
 All output files will be generated according to the passed arguments, as explained [here](https://dipy.org/documentation/1.1.1./reference_cmd/dipy_buan_profiles/).
-
+```
 ### Dependencies
 
 This App requires [singularity](https://www.sylabs.io/singularity/) to run.
